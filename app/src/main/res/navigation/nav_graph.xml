@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.nasa.ui.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_infoApplicationFragment"
+            app:destination="@id/infoApplicationFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_marsFragment"
+            app:destination="@id/marsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoApplicationFragment"
+        android:name="com.example.nasa.ui.info.InfoApplicationFragment"
+        android:label="fragment_info_application"
+        tools:layout="@layout/fragment_info_application" />
+    <fragment
+        android:id="@+id/marsFragment"
+        android:name="com.example.nasa.ui.section.MarsFragment"
+        android:label="fragment_mars"
+        tools:layout="@layout/fragment_mars" >
+        <action
+            android:id="@+id/action_marsFragment_to_apodFragment"
+            app:destination="@id/apodFragment" />
+        <action
+            android:id="@+id/action_marsFragment_to_satelliteFragment"
+            app:destination="@id/satelliteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apodFragment"
+        android:name="com.example.nasa.ui.section.apod.ApodFragment"
+        android:label="fragment_apod"
+        tools:layout="@layout/fragment_apod" />
+    <fragment
+        android:id="@+id/satelliteFragment"
+        android:name="com.example.nasa.ui.section.satellite.SatelliteFragment"
+        android:label="fragment_satellite"
+        tools:layout="@layout/fragment_satellite" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.nasa.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+</navigation>

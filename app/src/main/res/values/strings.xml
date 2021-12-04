@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Nasa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_application">Space</string>
+    <string name="name_application_2">and</string>
+    <string name="name_application_3">Stars</string>
+
+    <string name="api_key">EokjtqGQruggybwmxwsS8g5jQrmisUXv7OCROBo8</string>
+    <string name="sol_add">SOL +</string>
+    <string name="sol_delete">SOL -</string>
+    <string name="no_photos_were_found_for_this_sol">No photos were found for this SOL</string>
+</resources>

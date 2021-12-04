@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/toolbars"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_mars_photo_back"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        style="@style/AVLoadingIndicatorView.Large"
+        app:indicatorName="BallPulseIndicator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_mars_photo"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="3dp"
+        android:layout_below="@+id/toolbars"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/menu_layout_mars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+    <com.ogaclejapan.arclayout.ArcLayout
+        android:id="@id/arc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        app:arc_axisRadius="@dimen/layout_child_offset_path"
+        app:arc_freeAngle="true"
+        app:arc_origin="bottom"
+        app:arc_radius="@dimen/layout_radius_path">
+
+        <ImageButton
+            android:id="@+id/btn_curiosity"
+            style="@style/Path"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/curiosity"
+            app:arc_angle="20" />
+
+        <ImageButton
+            android:id="@+id/btn_opportunity"
+            style="@style/Path"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/opportunity"
+            app:arc_angle="60" />
+
+        <ImageButton
+            android:id="@+id/btn_spirit"
+            style="@style/Path"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/spirit"
+            app:arc_angle="120" />
+
+        <ImageButton
+            android:id="@+id/btn_perseverance"
+            style="@style/Path"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/perseverance"
+            app:arc_angle="160" />
+
+    </com.ogaclejapan.arclayout.ArcLayout>
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/fab_mars"
+        style="@style/Path"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sun" />
+
+    <LinearLayout
+        android:id="@+id/no_sol"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/astronaut"/>
+
+        <TextView
+            android:id="@+id/sol_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_photos_were_found_for_this_sol"
+            android:textColor="#FFE600"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sol_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFE600"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="bold"
+        android:layout_below="@+id/toolbars"
+        android:layout_alignParentEnd="true"
+        android:textSize="22sp"
+        android:layout_margin="16dp"
+        android:text="@string/sol_add"/>
+
+    <TextView
+        android:id="@+id/sol_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbars"
+        android:textColor="#FFE600"
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_margin="16dp"
+        android:text="@string/sol_delete"/>
+
+</RelativeLayout>

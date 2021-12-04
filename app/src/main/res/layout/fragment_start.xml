@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:match="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nasa.ui.start.StartFragment">
+
+
+    <ImageView
+        android:id="@+id/image_back_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.roger.match.library.MatchTextView
+            android:id="@+id/name_application"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            match:text="@string/name_application"
+            match:textColor="#ffffff"
+            match:textSize="15sp" />
+
+        <com.roger.match.library.MatchTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            match:text="@string/name_application_2"
+            match:textColor="#ffffff"
+            match:textSize="15sp" />
+
+        <com.roger.match.library.MatchTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            match:text="@string/name_application_3"
+            match:textColor="#ffffff"
+            match:textSize="15sp" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <com.ogaclejapan.arclayout.ArcLayout
+            android:id="@id/arc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            app:arc_axisRadius="@dimen/layout_child_offset_path"
+            app:arc_freeAngle="true"
+            app:arc_origin="bottom"
+            app:arc_radius="@dimen/layout_radius_path">
+
+            <ImageButton
+                android:id="@+id/info"
+                style="@style/Path"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/info"
+                app:arc_angle="60" />
+
+            <ImageButton
+                android:id="@+id/contact"
+                style="@style/Path"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/contacts"
+                app:arc_angle="90" />
+
+            <ImageButton
+                android:id="@+id/sections_btn_start"
+                style="@style/Path"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/next_button"
+                app:arc_angle="120" />
+
+        </com.ogaclejapan.arclayout.ArcLayout>
+
+    </FrameLayout>
+
+
+    <ImageButton
+        android:id="@+id/fab"
+        style="@style/Path"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sun" />
+
+</RelativeLayout>
